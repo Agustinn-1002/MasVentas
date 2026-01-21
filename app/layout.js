@@ -1,7 +1,8 @@
-import { Noto_Sans_SC} from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
+import {NavBar} from '@/components/Navbar/navBar'
 
-const font = Noto_Sans_SC({
+const font = Poppins({
   weight: ['400','500', '600', '700','800'],
   subsets: ["latin"],
 });
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${font.className} `}
       >
+        <NavBar></NavBar>
         {children}
       </body>
     </html>
