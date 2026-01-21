@@ -1,7 +1,7 @@
-import { Montserrat} from "next/font/google";
+import { Noto_Sans_SC} from "next/font/google";
 import "./globals.css";
 
-const font = Montserrat({
+const font = Noto_Sans_SC({
   weight: ['400','500', '600', '700','800'],
   subsets: ["latin"],
 });
