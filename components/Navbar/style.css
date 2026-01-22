@@ -1,39 +1,42 @@
 .navbarContein{
-    padding: 0 !important;
+    
     width: 100%;
     transition: all 0.4s ease-in-out;
+    z-index: 1000000;
 
 }
-.logo{
-    height: 35px;
-    margin-left: 30px;
-}
+
 .hamburger{
     cursor:pointer;
     font-size: 2rem;
-    color: #000000;
+    color: #757575;
     margin-right: 40px;
 }
 .nav-links{
     font-size: 1.1rem;
     padding: 40px;
     margin-top: -30px;
+    
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    color: #2e2e2e;
+    color: #303030;
+    text-transform: capitalize;
 }
 .nav-links a{
+    margin-top: 20px;
     cursor: pointer;
 }
 
 .nav-links a:hover {
-    color: #686868;
+    color: #757575;
 }
+
+
 .activeNav{
     position: absolute;
     height: 100vh;
-    background-color: #ffffff;
+    background-color: #e0e0e0;
     right: 0;
     top: 0;
     transition: all 0.2s ease-in-out;
@@ -41,24 +44,59 @@
 }
 .disabledNav{
     position: absolute;
-    background-color: #ffffff;
+    background-color: #e0e0e0;
     height: 100vh;
-    right: -200px;
+    right: -300px;
     top: 0;
     transition: all 0.3s ease-in-out;
     z-index: 1000000;
 }
+
+
+
+.activeInput{
+    position: absolute;
+    
+    right: 0;
+    top: 270;
+    transition: all 0.2s ease-in-out;
+    z-index: 1000000;
+}
+.disabledInput{
+    position: absolute;
+    
+    right: -300px;
+    top: 270;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000000;
+}
+
+
+
+
+
+
+
 .nav-links button{
     margin-right: 10px;
     outline: none;
     padding: 0;
-    color: #2e2e2e;
+    color: #303030;
     font-size: 2rem;
     font-weight: 600;
     border: none;
     background-color: transparent;
 }
 
+.nav-contain{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; 
+    z-index: 1000000;
+    background-color: rgba(255, 255, 255, 0.9);
+
+}
 .disableNavActive{
     position: absolute;
     width: 100%;
@@ -66,34 +104,17 @@
     top: 0;
     left: 0;
     z-index: 1000;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #0009;
     transition: all 0.3s ease-in-out;
 }
 .disableNavDisable{
     position: absolute;
     transition: all 0.3s ease-in-out;
-    background-color: #ffffff00;
-    top: 0;
-    left: 0;
+    background-color: #0000;
+    
 }
 
- .activeInput{
-    position: absolute;
-    background-color: #ffffff;
-    right: 0;
-    top: 0;
-    transition: all 0.2s ease-in-out;
-    z-index: 1000000;
-            
-}
-.disabledInput{
-    position: absolute;
-    right: -200px;
-    top: 0;
-    transition: all 0.3s ease-in-out;
-    z-index: 1000000;
-            
-}
+
 @media(min-width:770px){
     
     .hamburger, .disableNavDisable, .disableNavActive, .activeNav ,.nav-links button{
@@ -111,16 +132,11 @@
         justify-content: center;
         align-items: center;
     }
-
     .disabledInput{
         position:relative;
         right: 0;
         top: 0;
-        bottom: 0;
-        left: 0;
     }
-
-   
     .nav-links{
         margin: 0;
         padding: 0;
@@ -130,8 +146,19 @@
         align-items: center;
     }
     .nav-links a{
-        color: #2e2e2e;
         font-size: 16px;
+        text-transform: uppercase;
+        margin-top: 0;
+        
         font-weight: 500;
     }
-}   
+    .nav-contain{
+        width: 90%;
+    }
+}
+
+@media(min-width:1400px){
+    .nav-contain{
+        width: 70%;
+    }
+}

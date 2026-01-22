@@ -25,6 +25,7 @@ export const mainLogros = [
     {
         id: 1,
         color:'#ff8686',
+        position:'left-',
         title:'MAS Alcance',
         description:'Llegamos a más personas en los canales donde hoy se toman decisiones de compra.',
         data:'Gestionamos y optimizamos tu presencia en marketplaces, redes sociales y plataformas digitales para que tus productos y servicios tengan mayor visibilidad y lleguen al público correcto.'
@@ -32,6 +33,7 @@ export const mainLogros = [
     {
         id: 2,
         color:'#a1ff7a',
+        position:'right-',
         title:'MAS Presencia',
         description:'Construimos una imagen digital profesional, clara y coherente en todos tus canales.',
         data:'Diseñamos y mantenemos una presencia sólida a través de redes sociales, piezas gráficas, banners, contenido web y tiendas online alineadas a tu marca.'
@@ -39,6 +41,7 @@ export const mainLogros = [
     {
         id: 3,
         color:'#fffa77',
+        position:'left-',
         title:'MAS Conversión',
         description:'Transformamos visitas, clics y visualizaciones en clientes reales.',
         data:'Creamos estrategias y estructuras digitales pensadas para vender: publicaciones optimizadas, tiendas online funcionales y campañas orientadas a resultados.'
@@ -46,6 +49,7 @@ export const mainLogros = [
     {
         id: 4,
         color:'#8793ff',
+        position:'right-',
         title:'MAS Crecimiento',
         description: 'Impulsamos el crecimiento sostenido de tu negocio con soluciones digitales integrales.',
         data:'Conectamos estrategia, tecnología, diseño y gestión para que tu empresa escale de forma ordenada y rentable.'

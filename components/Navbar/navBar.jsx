@@ -14,16 +14,16 @@ export const NavBar = () => {
 
 
     return (
-         <nav className="navbarContein my-7 sticky top-7  ">
-            <div className="shadow-lg bg-white opacity-80 rounded-4xl lg:container mx-auto flex justify-between items-center lg:px-10 lg:py-3 relative z-50">
-                <a href="#Inicio">
+         <nav className="navbarContein fixed lg:top-5">
+            <div className="nav-contain py-3 md:m-auto md:rounded-4xl md:px-5 shadow-2xl">
+                <a href="#Inicio" className="ml-5">
                     <Image src={MasVentasLogo} alt="sss" className="" width={160} height={300} />
                 </a>
                 <div onClick={() => setNavActive(!navActive)} className="hamburger">
                     <AiOutlineMenu />
                 </div>
                 <div className={navActive ? "activeNav" : "disabledNav"}>
-                    <div className='nav-links lg:space-x-8 space-y-3 lg:space-y-0'>
+                    <div className='nav-links space-x-6'>
                         <button onClick={() => setNavActive(!navActive)}>X</button>
                         {
                             navLinks.map(i=>(
@@ -33,9 +33,11 @@ export const NavBar = () => {
                         
                     </div>
                 </div>
-                <div className={navActive ? "activeInput" : "disabledInput"}>
-                    <input className="bg-neutral-700 lg:px-6 lg:w-60 lg:py-2 rounded-4xl text-white text-sm" type="text" name="" id="" placeholder="Buscar..." />
-                </div>
+                    <div className={navActive ? "activeInput" : "disabledInput"}>
+                        <div className="mr-4">
+                        <input className="bg-neutral-700 px-3 lg:px-6 lg:w-60 py-2 rounded-4xl text-white text-sm" type="text" name="" id="" placeholder="Buscar..." />
+                        </div>
+                    </div>
                 <div onClick={() => setNavActive(false)} className={navActive ? "disableNavActive" : "disableNavDisable"}></div>
             </div>
         </nav>
