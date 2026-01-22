@@ -1,7 +1,6 @@
 .navbarContein{
     padding: 0 !important;
     width: 100%;
-    position: fixed;
     transition: all 0.4s ease-in-out;
 
 }

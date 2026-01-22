@@ -14,8 +14,8 @@ export const NavBar = () => {
 
 
     return (
-         <nav className="navbarContein mt-7 fixed">
-            <div className="bg-white opacity-80 rounded-4xl lg:container mx-auto flex justify-between items-center lg:px-10 lg:py-3 relative z-50">
+         <nav className="navbarContein my-7 sticky top-7  ">
+            <div className="shadow-lg bg-white opacity-80 rounded-4xl lg:container mx-auto flex justify-between items-center lg:px-10 lg:py-3 relative z-50">
                 <a href="#Inicio">
                     <Image src={MasVentasLogo} alt="sss" className="" width={160} height={300} />
                 </a>
@@ -34,7 +34,7 @@ export const NavBar = () => {
                     </div>
                 </div>
                 <div className={navActive ? "activeInput" : "disabledInput"}>
-                    <input className="bg-gray-400 lg:px-6 lg:w-60 lg:py-2 rounded-4xl text-white text-sm" type="text" name="" id="" placeholder="Buscar..." />
+                    <input className="bg-neutral-700 lg:px-6 lg:w-60 lg:py-2 rounded-4xl text-white text-sm" type="text" name="" id="" placeholder="Buscar..." />
                 </div>
                 <div onClick={() => setNavActive(false)} className={navActive ? "disableNavActive" : "disableNavDisable"}></div>
             </div>
