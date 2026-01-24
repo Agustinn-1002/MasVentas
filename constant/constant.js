@@ -1,4 +1,7 @@
 import redes from '@/public/redes.png'
+import diseñador from '@/public/diseñador.png'
+import webService from '@/public/webService.png'
+import ecommers from '@/public/ecommers.png'
 
 export const navLinks = [
     {
@@ -44,7 +47,7 @@ export const mainLogros = [
         title:'MAS Presencia',
         description:'Construimos una imagen digital profesional, clara y coherente en todos tus canales.',
         data:'Diseñamos y mantenemos una presencia sólida a través de redes sociales, piezas gráficas, banners, contenido web y tiendas online alineadas a tu marca.',
-        img: redes
+        img: diseñador
     },
     {
         id: 3,
@@ -55,7 +58,7 @@ export const mainLogros = [
         title:'MAS Conversión',
         description:'Transformamos visitas, clics y visualizaciones en clientes reales.',
         data:'Creamos estrategias y estructuras digitales pensadas para vender: publicaciones optimizadas, tiendas online funcionales y campañas orientadas a resultados.',
-        img: redes
+        img: webService
     },
     {
         id: 4,
@@ -66,6 +69,6 @@ export const mainLogros = [
         title:'MAS Crecimiento',
         description: 'Impulsamos el crecimiento sostenido de tu negocio con soluciones digitales integrales.',
         data:'Conectamos estrategia, tecnología, diseño y gestión para que tu empresa escale de forma ordenada y rentable.',
-        img: redes
+        img: ecommers
     }
 ]

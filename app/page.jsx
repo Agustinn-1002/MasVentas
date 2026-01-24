@@ -8,10 +8,12 @@ export default function Home() {
       <header className="md:mx-4 max-sm:px-4 sm:mx-6 lg:mx-10 bg-linear-20 from-fuchsia-100 via-fuchsia-50 to-white md:rounded-2xl ">
         <div className="flex flex-col md:flex-row justify-center items-center pb-16 pt-28 md:pt-40 md:pb-20">
           <div className="flex flex-col justify-center items-center space-y-5 md:pr-10">
-            <div className="flex items-center lg:w-8/12">
+            <div className="flex items-center lg:w-[700px]">
               <h1 className="text-4xl sm:text-5xl leading-tight md:leading-20 tracking-tighter text-center">
                 <span className="text-transparent bg-clip-text bg-linear-180 from-red-400 to-neutral-400">
-                  Impulsamos tu negocio en el <b>mundo digital</b>
+                  Impulsamos tu negocio en el mundo digital para lograr
+                  <br />
+                  <b>MÁS VENTAS</b>
                 </span>
               </h1>
             </div>
@@ -20,7 +22,7 @@ export default function Home() {
               <h3 className="text-center text-base sm:text-lg text-neutral-800">
                 Gestionamos y desarrollamos tu presencia digital para que tu marca crezca en todos los canales y logre{" "}
                 <span className="font-bold text-transparent bg-clip-text bg-linear-180 from-red-400 to-neutral-400">
-                  MásVentas
+                   Resultados
                 </span>
               </h3>
             </div>
@@ -33,7 +35,7 @@ export default function Home() {
       </header>
 
       <main className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        <section className="py-20">
+        <section className="py-40">
           <div className="space-y-28">
             {mainLogros.map((i) => {
               const isRight = i.position === "right";
@@ -41,22 +43,19 @@ export default function Home() {
               return (
                 <div
                   key={i.id}
-                  className="relative mx-auto grid w-full max-w-5xl items-center md:min-h-[420px] md:pb-[220px]"
+                  className="relative mx-auto grid w-full max-w-7xl items-center md:min-h-[420px] md:pb-[220px]"
                 >
-
-
                   {/* Card */}
                   <div
                     className={[
-                      "relative z-10 overflow-hidden",
-                      "w-full md:w-[52%] max-w-xl",
+                      "relative -my-6 z-10 overflow-hidden",
+                      "w-full md:w-[70%]",
                       "rounded-2xl px-6 py-5 md:px-9 md:py-6", // ⬅ menos padding vertical
-                      "border border-white/60",
                       "shadow-[0_22px_70px_-45px_rgba(0,0,0,0.45)]",
                       "backdrop-blur-sm",
                       isRight
-                        ? "md:ml-auto md:text-right md:-translate-y-6"
-                        : "md:mr-auto md:text-left md:-translate-y-6",
+                        ? "md:ml-auto md:text-right"
+                        : "md:mr-auto md:text-left",
                     ].join(" ")}
                     style={{ background: i.color }}
                   >
@@ -85,9 +84,9 @@ export default function Home() {
                         <div className="h-px w-24 bg-black/10" />
                       </div>
 
-                      <p className="mt-3 text-[14.5px] leading-5 text-neutral-800/90">
+                      <b className="mt-3 text-[14.5px] leading-5 text-neutral-800/90">
                         {i.description}
-                      </p>
+                      </b>
 
                       <p className="mt-2 text-sm leading-5 text-neutral-700/80">
                         {i.data}
@@ -96,7 +95,7 @@ export default function Home() {
 
                       {/* CTA discreto (opcional) */}
                       <div className={isRight ? "mt-6 flex justify-end" : "mt-6 flex justify-start"}>
-                        <button className="mt-4 inline-flex items-center rounded-lg bg-white/80 px-3 py-1.5 text-sm font-semibold text-neutral-900 hover:bg-white">
+                        <button className="inline-flex items-center rounded-lg bg-white/80 px-3 py-1.5 text-sm font-semibold text-neutral-900 hover:bg-white">
                           Ver detalles
                         </button>
 
@@ -110,17 +109,16 @@ export default function Home() {
                       "mt-8 md:mt-0 pointer-events-none",
                       "md:absolute md:bottom-0",
                       // pegado hacia la card:
-                      isRight ? "md:left-1/2 md:-translate-x-[92%]" : "md:right-1/2 md:translate-x-[92%]",
+                      isRight ? "md:left-20 " : "md:right-10",
                       // un toque más “sobre el torso”
-                      "md:-translate-y-2",
+                      "md:-translate-y-30",
                     ].join(" ")}
                   >
                     <Image
                       src={i.img}
                       alt={i.title}
-                      className="h-auto w-full max-w-sm md:max-w-md"
+                      className="h-auto w-full max-w-sm [-webkit-mask-image:linear-gradient(to_bottom,black_90%,transparent_100%)]"
                       sizes="(min-width: 1024px) 400px, (min-width: 768px) 420px, 90vw"
-                      priority={i.id === 1}
                     />
                   </div>
 
