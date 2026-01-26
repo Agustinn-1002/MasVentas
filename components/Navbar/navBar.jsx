@@ -34,8 +34,8 @@ export const NavBar = () => {
                     </div>
                 </div>
                     <div className={navActive ? "activeInput" : "disabledInput"}>
-                        <div className="mr-4">
-                        <input className="bg-neutral-700 px-3 lg:px-6 lg:w-60 py-2 rounded-4xl text-white text-sm" type="text" name="" id="" placeholder="Buscar..." />
+                        <div className="max-sm:mr-10">
+                        <button className="bg-neutral-700 px-3 lg:px-6 lg:w-60 py-2 rounded-4xl text-white text-sm" >Contactanos</button>
                         </div>
                     </div>
                 <div onClick={() => setNavActive(false)} className={navActive ? "disableNavActive" : "disableNavDisable"}></div>

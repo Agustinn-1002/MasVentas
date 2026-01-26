@@ -6,22 +6,22 @@ import ecommers from '@/public/ecommers.png'
 export const navLinks = [
     {
         id: 1,
-        url: '/',
+        url: '#',
         label: 'Inicio'
     },
     {
         id: 2,
-        url: '/Logros',
+        url: '#logros',
         label: 'Logros'
     },
     {
         id: 3,
-        url: '/Nosotros',
-        label: 'Nosotros'
+        url: '#contacto',
+        label: 'Contacto'
     },
     {
         id: 4,
-        url: '/Clientes',
+        url: '#clientes',
         label: 'Nuestros Clientes'
     },
 ]
