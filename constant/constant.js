@@ -29,46 +29,75 @@ export const navLinks = [
 export const mainLogros = [
     {
         id: 1,
-        color:'#ff868677',
+        color: '#ff868677',
         fontColor: '#cb1d1d',
-        position:'left',
+        position: 'left',
         ubication: 'start',
-        title:'MAS Alcance',
-        description:'Llegamos a más personas en los canales donde hoy se toman decisiones de compra.',
-        data:'Gestionamos y optimizamos tu presencia en marketplaces, redes sociales y plataformas digitales para que tus productos y servicios tengan mayor visibilidad y lleguen al público correcto.',
-        img: redes
+        title: 'MAS Alcance',
+        description: 'Gestión de plataformas de venta online',
+        data: 'Administramos y optimizamos tus productos en plataformas de ecommerce para aumentar visibilidad, orden y oportunidades reales de venta.',
+        items: [
+            "Marketplaces",
+            "Tiendas",
+            "Productos",
+            "Optimización"
+        ],
+        img: redes,
+        url: '/servicios/gestion-plataformas'
     },
     {
         id: 2,
-        color:'#a1ff7a77',
+        color: '#a1ff7a77',
         fontColor: '#4cb81f',
-        position:'right',
+        position: 'right',
         ubication: 'end',
-        title:'MAS Presencia',
-        description:'Construimos una imagen digital profesional, clara y coherente en todos tus canales.',
-        data:'Diseñamos y mantenemos una presencia sólida a través de redes sociales, piezas gráficas, banners, contenido web y tiendas online alineadas a tu marca.',
-        img: diseñador
+        title: 'MAS Presencia',
+        description: 'Desarrollo de tiendas online profesionales',
+        data: 'Desarrollamos tiendas web funcionales y escalables, preparadas para vender y representar correctamente a tu marca.',
+        items: [
+            "Diseño",
+            "Desarrollo",
+            "Pagos",
+            "Mobile"
+        ],
+        img: diseñador,
+        url: "/servicios/tiendas-online"
+
     },
     {
         id: 3,
-        color:'#fffa7777',
+        color: '#fffa7777',
         fontColor: '#e4dc1b',
-        position:'left',
+        position: 'left',
         ubication: 'start',
-        title:'MAS Conversión',
-        description:'Transformamos visitas, clics y visualizaciones en clientes reales.',
-        data:'Creamos estrategias y estructuras digitales pensadas para vender: publicaciones optimizadas, tiendas online funcionales y campañas orientadas a resultados.',
-        img: webService
+        title: 'MAS Conversión',
+        description: 'Gestión de publicidad digital',
+        data: 'Planificamos y administramos campañas publicitarias enfocadas en generar tráfico calificado y ventas.',
+        items: [
+            "Anuncios",
+            "Segmentación",
+            "Campañas",
+            "Resultados"
+        ],
+        img: webService,
+        url: "/servicios/publicidad-digital"
     },
     {
         id: 4,
-        color:'#8793ff77',
+        color: '#8793ff77',
         fontColor: '#1625ad',
-        position:'right',
+        position: 'right',
         ubication: 'end',
-        title:'MAS Crecimiento',
-        description: 'Impulsamos el crecimiento sostenido de tu negocio con soluciones digitales integrales.',
-        data:'Conectamos estrategia, tecnología, diseño y gestión para que tu empresa escale de forma ordenada y rentable.',
-        img: ecommers
+        title: 'MAS Impacto',
+        description: 'Diseño gráfico y contenido digital',
+        data: "Creamos piezas visuales claras y profesionales para comunicar tu marca en todos los canales digitales.",
+        items: [
+            "Banners",
+            "Redes",
+            "Publicaciones",
+            "Creatividad"
+        ], 
+        img: ecommers,
+        url: "/servicios/diseno-digital"
     }
 ]
