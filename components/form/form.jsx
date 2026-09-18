@@ -1,14 +1,16 @@
 import Image from "next/image";
 import masventas from "@/public/masventas.png";
+import { contactInfo } from "@/constant/constant";
+import { Reveal } from "@/components/Reveal/reveal";
 
 export const FormUser = () => {
   return (
     <section className="py-20" id="contacto">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 md:grid-cols-2">
-          
+
           {/* Texto */}
-          <div className="space-y-6">
+          <Reveal className="space-y-6">
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-neutral-900">
               ¿Querés saber cómo podemos ayudar a tu negocio?
             </h2>
@@ -19,24 +21,24 @@ export const FormUser = () => {
             </p>
 
             <a
-              href="https://wa.me/549261-------?text=Hola%20quiero%20más%20información"
+              href={`https://wa.me/${contactInfo.phoneWhatsapp}?text=Hola%20quiero%20más%20información`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-xl bg-green-500 px-6 py-3 text-base font-semibold text-white shadow-lg transition hover:bg-green-600"
+              className="inline-flex items-center justify-center rounded-xl bg-green-500 px-6 py-3 text-base font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-green-600 hover:shadow-xl active:scale-95"
             >
               Hablar por WhatsApp
             </a>
-          </div>
+          </Reveal>
 
           {/* Imagen */}
-          <div className="relative">
+          <Reveal delay={150} className="relative">
             <Image
               src={masventas}
               alt="Contacto"
-              className=""
+              className="animate-float"
               priority
             />
-          </div>
+          </Reveal>
 
         </div>
       </div>

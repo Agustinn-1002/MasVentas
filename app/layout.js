@@ -1,26 +1,94 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import {NavBar} from '@/components/Navbar/navBar'
+import { siteUrl, contactInfo } from '@/constant/constant'
 
 const font = Poppins({
   weight: ['400','500', '600', '700','800'],
   subsets: ["latin"],
 });
 
+const title = "MasVentas 360 | Agencia de Servicios Digitales";
+const description = "Gestionamos marketplaces, desarrollamos tiendas online y creamos campañas de publicidad digital para que tu negocio venda más. Servicios digitales 360° en Mendoza, Argentina.";
 
 export const metadata = {
-  title: "MasVentas - 360",
-  description: "MasVentas 360En MasVentas – Servicios Digitales 360 ayudamos a empresas y emprendedores a potenciar su presencia digital y aumentar sus resultados comerciales. Gestionamos y optimizamos marketplaces como Mercado Libre, Frávega y OnCity, desarrollamos tiendas online en plataformas como Tienda Nube, WooCommerce y Empretienda, creamos campañas de publicidad digital, administramos redes sociales y diseñamos piezas gráficas y sitios web comerciales. Nuestro enfoque integral permite conectar todos los canales digitales de tu negocio para lograr mayor alcance, mejor conversión y crecimiento sostenido, transformando la visibilidad online en más ventas.",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: title,
+    template: "%s | MasVentas 360",
+  },
+  description,
+  keywords: [
+    "agencia marketing digital Mendoza",
+    "gestión de marketplaces",
+    "tiendas online",
+    "publicidad digital",
+    "Mercado Libre",
+    "Tienda Nube",
+  ],
+  authors: [{ name: "MasVentas 360" }],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "es_AR",
+    url: siteUrl,
+    siteName: "MasVentas 360",
+    title,
+    description,
+    images: [
+      {
+        url: "/MasVentasHeader.png",
+        width: 1200,
+        height: 630,
+        alt: "MasVentas - Servicios Digitales 360°",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: ["/MasVentasHeader.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({ children }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "MasVentas 360",
+    description,
+    url: siteUrl,
+    email: contactInfo.email,
+    telephone: `+${contactInfo.phoneWhatsapp}`,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Mendoza",
+      addressCountry: "AR",
+    },
+    areaServed: "AR",
+    sameAs: [],
+  };
+
   return (
-    <html lang="en">
+    <html lang="es">
       <body
         className={`${font.className} `}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <NavBar></NavBar>
-        {children}
+        <div className="isolate">
+          {children}
+        </div>
       </body>
     </html>
   );

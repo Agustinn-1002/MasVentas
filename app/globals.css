@@ -1,7 +1,83 @@
 @import "tailwindcss";
 
 
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   background-color: #fff;
-  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+#logros,
+#contacto,
+#clientes{
+  scroll-margin-top: 110px;
+}
+
+@media (prefers-reduced-motion: reduce){
+  html{
+    scroll-behavior: auto;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-16px); }
+}
+
+@keyframes float-sm {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes blob {
+  0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.9; }
+  25% { transform: translate(50px, -60px) scale(1.15); opacity: 1; }
+  50% { transform: translate(-30px, 30px) scale(0.9); opacity: 0.75; }
+  75% { transform: translate(35px, 50px) scale(1.08); opacity: 1; }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.animate-float{
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-sm{
+  animation: float-sm 5s ease-in-out infinite;
+}
+
+.animate-blob{
+  animation: blob 9s ease-in-out infinite;
+}
+
+.animate-pulse-soft{
+  animation: pulse-soft 4s ease-in-out infinite;
+}
+
+.reveal{
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.is-visible{
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce){
+  .animate-float, .animate-float-sm, .animate-blob, .animate-pulse-soft{
+    animation: none;
+  }
+  .reveal{
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }

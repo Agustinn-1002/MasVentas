@@ -1,7 +1,6 @@
 .navbarContein{
-    
+
     width: 100%;
-    transition: all 0.4s ease-in-out;
     z-index: 1000000;
 
 }
@@ -30,6 +29,26 @@
 
 .nav-links a:hover {
     color: #757575;
+}
+
+.nav-link{
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after{
+    width: 100%;
 }
 
 
@@ -92,9 +111,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative; 
+    position: relative;
     z-index: 1000000;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #ffffff;
 
 }
 .disableNavActive{
