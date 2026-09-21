@@ -58,16 +58,18 @@
     background-color: #e0e0e0;
     right: 0;
     top: 0;
-    transition: all 0.2s ease-in-out;
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
     z-index: 1000000;
 }
 .disabledNav{
     position: absolute;
     background-color: #e0e0e0;
     height: 100vh;
-    right: -300px;
+    right: 0;
     top: 0;
-    transition: all 0.3s ease-in-out;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
     z-index: 1000000;
 }
 
@@ -75,18 +77,20 @@
 
 .activeInput{
     position: absolute;
-    
+
     right: 0;
-    top: 270;
-    transition: all 0.2s ease-in-out;
+    top: 270px;
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
     z-index: 1000000;
 }
 .disabledInput{
     position: absolute;
-    
-    right: -300px;
-    top: 270;
-    transition: all 0.3s ease-in-out;
+
+    right: 0;
+    top: 270px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
     z-index: 1000000;
 }
 
@@ -146,6 +150,7 @@
         height: 60px;
         right: 0;
         top: 0;
+        transform: none;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -155,6 +160,7 @@
         position:relative;
         right: 0;
         top: 0;
+        transform: none;
     }
     .nav-links{
         margin: 0;
